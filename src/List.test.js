@@ -12,7 +12,7 @@ it('renders without crashing', () => {
 
 it('renders the UI as expected', () => {
     const tree = renderer
-      .create(<List name="List" unread={4}/>)
+      .create(<List header='header' cards='cards'/>)
       .toJSON();
     expect(tree).toMatchSnapshot();  
     });
