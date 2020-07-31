@@ -5,9 +5,7 @@ import Card from './card';
 export default function list(props) {
     const {
         id,
-        title,
         header,
-        content,
         onClickAdd = () => {},
         onClickDelete = () => {}
     } = props;
@@ -20,10 +18,10 @@ export default function list(props) {
             <div className='List-cards'>
                 {props.cards.map((card) => 
                     <Card
-                    key={id}
-                    id={id}
-                    title={title}
-                    content={content}
+                    key={card.id}
+                    id={card.id}
+                    title={card.title}
+                    content={card.content}
                     onClickDelete={onClickDelete}
                   />
                 )}
